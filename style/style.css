@@ -1,0 +1,326 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  letter-spacing: 2px;
+}
+
+/* product_Card Start */
+.produtcardWrapper {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /* padding-top: 220px; */
+}
+
+.productcardContent {
+  background-color: #FEF3DA;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 3px solid #113F75;
+}
+
+.productimgWrapper img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 0;
+  display: block;
+  /*remove space below img tag */
+  aspect-ratio: 4/3;
+}
+
+.productcardTitle {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #2B325C;
+  margin: 15px;
+}
+
+.productcardTitle img {
+  width: 30px;
+  padding-left: 3px;
+}
+
+.priceWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  padding: 0 0 12px 0;
+}
+
+.price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #5E5E5E;
+  line-height: 20px;
+  padding-right: 12px;
+  text-decoration: line-through;
+}
+
+.discount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #113F75;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.productQuantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #5E5E5E;
+}
+
+.qty {
+  padding: 3px 8px;
+  margin: 0px 20px 0 5px;
+  background-color: #fff;
+  border: 1px solid #113F75;
+  color: #113F75;
+  font-weight: 400;
+  border-radius: 8px;
+}
+
+.qty2 {
+  padding: 3px 12px;
+  margin: 0px 5px;
+  background-color: #fff;
+  border: 1px solid #113F75;
+  border-radius: 8px;
+}
+
+.addButton {
+  width: 210px;
+  text-align: center;
+  background-color: #FAD249;
+  color: #113F75;
+  border: 3px solid #113F75;
+  border-radius: 8px;
+  padding: 8px 35px;
+  margin: 15px 0 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 500;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.addButton p {
+  padding-right: 8px;
+}
+
+.productWrapper {
+  background-color: #fff;
+  width: 390px;
+}
+
+.cart {
+  width: 35px;
+}
+
+.description {
+  max-width: 320px;
+}
+
+.shopName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #2B325C;
+}
+
+.shopName img {
+  width: 40px;
+}
+
+.productName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #2B325C;
+}
+
+.productName img {
+  width: 40px;
+}
+
+.drink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #113F75;
+  width: 115px;
+  background-color: #FEF3DA;
+  border-radius: 8px;
+  padding: 3px;
+  margin: 5px;
+  font-weight: 400;
+}
+
+.drink img {
+  width: 30px;
+  padding-right: 3px;
+}
+
+.deadline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #113F75;
+  width: 160px;
+  height: 40px;
+  background-color: #FEF3DA;
+  margin: 10px 0;
+  border-radius: 8px;
+  font-weight: 400;
+}
+
+.deadline img {
+  width: 30px;
+  padding-right: 3px;
+}
+
+.collection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 160px;
+  height: 40px;
+  background-color: #FEF3DA;
+  border-radius: 8px;
+  color: #113F75;
+}
+
+.collection img {
+  width: 30px;
+  padding-right: 5px;
+}
+
+.description {
+  color: #5E5E5E;
+}
+
+.discount img {
+  width: 30px;
+}
+
+.priceContent {
+  background-color: #FEF3DA;
+  width: 390px;
+  padding: 40px 0 12px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.quantity p {
+  padding-right: 10px;
+  margin-top: 10px;
+}
+
+.quantityButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 180px;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+}/*# sourceMappingURL=style.css.map */
