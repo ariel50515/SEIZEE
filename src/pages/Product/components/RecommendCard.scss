@@ -4,7 +4,7 @@ main {
     margin: 0;
     padding: 0;
     list-style: none;
-    letter-spacing: 2px
+    letter-spacing: 2px;
 }
 
 $main-blue: #2B325C;
@@ -49,6 +49,9 @@ $main-border-radius: 8px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: $main-yellow;
+    height: 250px;
+    padding-bottom: 55px;
 }
 .a-productRecommend h3 {
     @extend %h3
