@@ -1,7 +1,7 @@
 import React from 'react'
-import './style/EventDate.scss'
+import './style/NewEvent.scss'
 
-function EventDate() {
+function NewEvent() {
   return (
     <>
       <div class="a-eventBanner">
@@ -61,4 +61,4 @@ function EventDate() {
   )
 }
 
-export default EventDate
+export default NewEvent

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import './components/ProductDetail.scss'
+import './components/style/ProductDetail.scss'
 import RecommendCard from './components/RecommendCard'
 
 function ProductDetail(

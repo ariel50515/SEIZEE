@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import './RecommendCard.scss'
+import './style/RecommendCard.scss'
 
 function RecommendCard(picture_url) {
   const [recommend, setRecommend] = useState([])

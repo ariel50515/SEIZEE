@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './ProductCard.scss'
+import './style/ProductCard.scss'
 
 function ProductCard({
   shop_list_sid,

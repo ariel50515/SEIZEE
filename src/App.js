@@ -5,9 +5,10 @@ import YellowWave from './pages/Product/components/YellowWave'
 import YellowWave2 from './pages/Product/components/YellowWave2'
 // import Video from './pages/home/components/video'
 import AboutUs from './pages/home/components/AboutUs'
-import EventDate from './pages/home/components/EventDate'
+import NewEvent from './pages/home/components/NewEvent'
 import ProductList from './pages/Product/ProductList'
 // import Slider from './pages/home/slider'
+import Carousel from './pages/Product/components/Carousel'
 
 function App() {
   return (
@@ -25,12 +26,13 @@ function App() {
         <ProductCard />
       </div> */}
       {/* <ProductList /> */}
-      <AboutUs />
+      {/* <AboutUs /> */}
       {/* <ProductDetail /> */}
       {/* <YellowWave2 /> */}
       {/* <ProductList /> */}
-      <EventDate />
+      <NewEvent />
       {/* <Slider /> */}
+      {/* <Carousel /> */}
     </>
   )
 }
