@@ -1,6 +1,6 @@
 import './App.css'
 import ProductCard from './pages/Product/components/ProductCard'
-import ProductDescripton from './pages/Product/components/ProductDescripton'
+import ProductDetail from './pages/Product/ProductDetail'
 import YellowWave from './pages/Product/components/YellowWave'
 import YellowWave2 from './pages/Product/components/YellowWave2'
 // import Video from './pages/home/components/video'
@@ -23,11 +23,11 @@ function App() {
         <ProductCard />
         <ProductCard />
       </div> */}
-      <ProductList />
-      {/* <Video /> */}
-      {/* <ProductDescripton />
-      <YellowWave2 /> */}
       {/* <ProductList /> */}
+      {/* <Video /> */}
+      <ProductDetail />
+      {/* <YellowWave2 /> */}
+      <ProductList />
       {/* <EventDate /> */}
     </>
   )

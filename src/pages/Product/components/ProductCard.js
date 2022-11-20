@@ -1,35 +1,42 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './ProductCard.scss'
 
-function ProductCard() {
+function ProductCard({
+  shop_list_sid,
+  sid,
+  picture_url,
+  product_name,
+  unit_price,
+  sale_price,
+  inventory_qty,
+}) {
   return (
     <>
       <div className="a-produtCardWrapper">
         <div className="a-productCardContent">
           <div className="a-productImgWrapper">
-            <img src="/img/10008.jpg" alt="" />
+            <img src={`/img/${picture_url}`} alt="商品照" />
           </div>
           <div className="a-productCardTitle">
-            <h3>玉米濃湯麵包</h3>
+            <h3>{product_name}</h3>
             <img src="svg/collection.svg" alt="" />
           </div>
           <div className="a-priceWrapper">
             <div className="a-productPrice">
-              <p>原價</p>
-              <p>$150元</p>
+              <p>$原價{unit_price}元</p>
             </div>
             <div className="a-productDiscount">
               <img src="./svg/like.svg" alt="" />
-              <p>折價</p>
-              <p>$90元</p>
+              <p>$折價{sale_price}元</p>
             </div>
           </div>
           <div className="a-productQuantity">
             <p>惜食剩餘數量</p>
-            <p className="a-quantity">6</p>
+            <p className="a-quantity">{inventory_qty}</p>
             <p>數量</p>
             <p className="a-quantity2">
-              2
+              {inventory_qty}
               <img src="svg/triangle.svg" alt="" />
             </p>
           </div>

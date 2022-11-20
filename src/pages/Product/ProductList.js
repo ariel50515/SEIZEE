@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { PRODUCT } from '../../my-config'
 import axios from 'axios'
 import ProductCard from './components/ProductCard'
 
-function ProductList(props) {
+function ProductList() {
   const [productCard, setProductCard] = useState([])
 
   // const location = useLocation()
@@ -14,14 +14,13 @@ function ProductList(props) {
     const response = await axios.get(
       'http://localhost:3002/product_list?shop_list_sid=3'
     )
-    console.log(' response ' + response)
+    console.log(response)
     setProductCard(response.data)
   }
   useEffect(() => {
-    console.log('useeffect')
     getProductCard()
   }, [])
-  console.log(' productcard ' + productCard)
+  // console.log(' productcard ' + productCard)
   const CardList = productCard.map((product) => {
     return (
       <ProductCard
@@ -36,14 +35,7 @@ function ProductList(props) {
       />
     )
   })
-  console.log('CardList - ' + CardList)
-  return(
-    <>
-  { CardList }
-    </>
-  )
-  
-
-  // return <p>hello</p>
+  // console.log('CardList - ' + CardList)
+  return <>{CardList}</>
 }
 export default ProductList
