@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
-import './style/Video.scss'
+import './style/AboutUs.scss'
 
-export default function VideoTest() {
+export default function AboutUs() {
   const videoEl = useRef(null)
 
   const attemptPlay = () => {

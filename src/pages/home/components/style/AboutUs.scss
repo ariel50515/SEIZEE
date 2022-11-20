@@ -30,7 +30,7 @@ $main-border-radius: 8px;
   }
   .a-videoWrapper {
     position: relative;
-    width: 600;
+    width: 800px;
     margin: auto;
   }
   video {
@@ -39,7 +39,7 @@ $main-border-radius: 8px;
   }
   .a-aboutUs {
     position: absolute;
-    left: -20px;
+    left: -30px;
     top: 0px;
     z-index: 1;
     background-color: $secondary-yellow;

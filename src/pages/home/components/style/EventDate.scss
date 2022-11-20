@@ -49,42 +49,47 @@ img {
   padding-top: 20px;
 }
 
+.a-eventBanner {
+display: flex;
+justify-content: center;
 .a-eventWrapper {
   width: 800px;
   background-color: $secondary-blue;
-  @extend %a-flex;
-  // position: relative;
-  .a-eventText{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  position: relative;
     .a-newEvent {
       background-color: $secondary-yellow;
       border-radius: $main-border-radius;
       width: 170px;
       height: 50px;
       @extend %a-flex;
-      // position: absolute;
+      position: absolute;
       top: 0;
-      left: -10;
+      left: -30px;
+      z-index: 1;
     }
-    .a-whatFun {
-      color: #fff;
-      font-weight: 900;
-      width: 30px;
-      letter-spacing: 3px; 
+    .a-eventText {
+      width: 140px;
+      margin-top: line(6.5);
+      .a-whatFun {
+        color: #fff;
+        font-weight: 900;
+        letter-spacing: 3px; 
+      }
     }
-  }
-  .a-eventContent{
+  .a-eventContent {
     @extend %a-flex;
     background-color: #fff;
     height: 230px;
-    width: 600px;
+    margin: 20px 5px 20px 0;
   .a-calendarWrapper {
     @extend %a-flex;
     flex-direction: column;
     background-color: $text-shadow;
     width: 150px;
-    height: 200px;
+    height: 190px;
+    margin-left: 10px;
     .a-imgWrapper img{
       width: 45px;
       margin: 0 0 5px 0;
@@ -105,16 +110,20 @@ img {
     }
     .a-day {
       @extend %h2;
-      margin: 0;
+      margin: 0px;
     }
   }
+  .a-eventContentWrapper {
+    display: flex;
+    flex-direction: column;
   .a-event {
     @extend %a-flex;
-    background-color: #fff;
+    // height: 100px;
   }
   .a-eventDayWrapper h4 {
     @extend %h4;
-    margin: 3px;
+    @extend %a-flex;
+    margin: 0px 8px;
     color: $main-blue;
   }
   .a-eventImgWrapper {
@@ -140,5 +149,7 @@ img {
     border-radius:$main-border-radius;
     margin: 10px;
   }
+}
+}
 }
 }

@@ -24,8 +24,9 @@ function ProductList() {
   const CardList = productCard.map((product) => {
     return (
       <ProductCard
-        shopId={product.shop_list_sid}
+        // key={product.food_product.sid}
         productId={product.sid}
+        shopId={product.shop_list_sid}
         img={product.picture_url}
         name={product.product_name}
         price={product.unit_price}

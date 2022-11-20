@@ -4,9 +4,10 @@ import ProductDetail from './pages/Product/ProductDetail'
 import YellowWave from './pages/Product/components/YellowWave'
 import YellowWave2 from './pages/Product/components/YellowWave2'
 // import Video from './pages/home/components/video'
-import Video from './pages/home/components/Video'
+import AboutUs from './pages/home/components/AboutUs'
 import EventDate from './pages/home/components/EventDate'
 import ProductList from './pages/Product/ProductList'
+// import Slider from './pages/home/slider'
 
 function App() {
   return (
@@ -24,11 +25,12 @@ function App() {
         <ProductCard />
       </div> */}
       {/* <ProductList /> */}
-      {/* <Video /> */}
-      <ProductDetail />
+      <AboutUs />
+      {/* <ProductDetail /> */}
       {/* <YellowWave2 /> */}
-      <ProductList />
-      {/* <EventDate /> */}
+      {/* <ProductList /> */}
+      <EventDate />
+      {/* <Slider /> */}
     </>
   )
 }
