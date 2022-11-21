@@ -8,7 +8,6 @@ import AboutUs from './pages/home/components/AboutUs'
 import NewEvent from './pages/home/components/NewEvent'
 import ProductList from './pages/Product/ProductList'
 // import Slider from './pages/home/slider'
-import Carousel from './pages/Product/components/Carousel'
 
 function App() {
   return (
@@ -32,7 +31,6 @@ function App() {
       {/* <ProductList /> */}
       <NewEvent />
       {/* <Slider /> */}
-      {/* <Carousel /> */}
     </>
   )
 }

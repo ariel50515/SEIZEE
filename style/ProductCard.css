@@ -7,13 +7,7 @@ main {
   letter-spacing: 2px;
 }
 
-.a-produtCardWrapper .a-productCardTitle h3 {
-  font-size: 20px;
-  color: #2B325C;
-  font-weight: 500;
-}
-
-.a-produtCardWrapper .a-addButton, .a-produtCardWrapper .a-Quantity, .a-produtCardWrapper .a-productDiscount, .a-produtCardWrapper .a-productPrice, .a-produtCardWrapper .a-productCardTitle, .a-produtCardWrapper .a-productCardContent, .a-produtCardWrapper {
+.a-produtCardWrapper .a-addButton, .a-produtCardWrapper .a-quantity2, .a-produtCardWrapper .a-productQuantity, .a-produtCardWrapper .a-productDiscount, .a-produtCardWrapper .a-productPrice, .a-produtCardWrapper .a-productCardTitle, .a-produtCardWrapper .a-productCardContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,16 +20,15 @@ main {
 }
 
 .a-produtCardWrapper {
-  max-width: 400px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 .a-produtCardWrapper .a-productCardContent {
-  background-color: #FFDC96;
+  background-color: #FEF3DA;
   width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -43,12 +36,17 @@ main {
           flex-direction: column;
   border: 3px solid #113F75;
 }
-.a-produtCardWrapper .a-productCardContent .a-productCardContent img {
+.a-produtCardWrapper .a-productCardContent .a-productImgWrapper {
+  width: 100%;
+  overflow: hidden;
+}
+.a-produtCardWrapper .a-productCardContent .a-productImgWrapper img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
   padding: 0;
-  display: block;
   aspect-ratio: 4/3;
 }
 .a-produtCardWrapper .a-productCardTitle img {
@@ -62,11 +60,11 @@ main {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   text-align: center;
-  padding: 0 0 12px 0;
+  padding: 0 0 8px 0;
 }
 .a-produtCardWrapper .a-productPrice {
   color: #5E5E5E;
-  line-height: 20px;
+  line-height: 15px;
   padding-right: 12px;
   text-decoration: line-through;
 }
@@ -75,10 +73,13 @@ main {
   line-height: 20px;
   font-weight: 500;
 }
-.a-produtCardWrapper .a-Quantity {
-  color: #5E5E5E;
+.a-produtCardWrapper .a-productDiscount img {
+  width: 32px;
 }
 .a-produtCardWrapper .a-productQuantity {
+  color: #5E5E5E;
+}
+.a-produtCardWrapper .a-quantity {
   padding: 3px 8px;
   margin: 0px 20px 0 5px;
   background-color: #fff;
@@ -87,22 +88,29 @@ main {
   font-weight: 400;
   border-radius: 8px;
 }
-.a-produtCardWrapper .a-productQuantity2 {
-  padding: 3px 12px;
-  margin: 0px 5px;
+.a-produtCardWrapper .a-quantity2 {
+  padding: 0px 10px;
+  margin: 0px 6px;
   background-color: #fff;
   border: 3px solid #113F75;
   color: #113F75;
   border-radius: 8px;
 }
 .a-produtCardWrapper .a-addButton {
-  width: 210px;
-  text-align: center;
+  width: 160px;
   background-color: #FAD249;
   color: #2B325C;
   border: 3px solid #113F75;
   border-radius: 8px;
-  padding: 8px 35px;
+  padding: 3px 20px;
   margin: 15px 0 40px 0;
   font-weight: 500;
+}
+.a-produtCardWrapper .a-addButton img {
+  width: 35px;
+}
+@media screen and (max-width: 390px) {
+  .a-produtCardWrapper .a-produtCardWrapper {
+    max-width: 30%;
+  }
 }/*# sourceMappingURL=ProductCard.css.map */
