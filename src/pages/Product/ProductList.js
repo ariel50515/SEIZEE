@@ -1,42 +1,35 @@
 import { useState, useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
-import { PRODUCT } from '../../my-config'
+import { PRODUCT } from '../my-config'
 import axios from 'axios'
 import ProductCard from './components/ProductCard'
+import HeadWave from '../components/HeadWave'
+import YellowWave2 from './components/YellowWave2'
 
 function ProductList() {
-  const [productCard, setProductCard] = useState([])
+  const [allProduct, setAllProduct] = useState([])
+  const [errorMessage, setErrorMessage] = useState([])
 
   // const location = useLocation()
   // console.log(location)
 
   async function getProductCard() {
-    const response = await axios.get(
-      'http://localhost:3002/product_list?shop_list_sid=3'
-    )
-    console.log(response)
-    setProductCard(response.data)
+    try {
+      const response = await axios.get(
+        'http://localhost:3002/product?shop_list_sid=3'
+      )
+      console.log(response)
+      const Pdata = response.data
+      setAllProduct(Pdata)
+    } catch (e) {
+      console.error(e.message)
+      setErrorMessage(e.message)
+    }
   }
   useEffect(() => {
     getProductCard()
   }, [])
-  // console.log(' productcard ' + productCard)
-  const CardList = productCard.map((product) => {
-    return (
-      <ProductCard
-        // key={product.food_product.sid}
-        productId={product.sid}
-        shopId={product.shop_list_sid}
-        img={product.picture_url}
-        name={product.product_name}
-        price={product.unit_price}
-        discount={product.sale_price}
-        quantity={product.inventory_qty}
-        residual={product.inventory_qty}
-      />
-    )
-  })
-  // console.log('CardList - ' + CardList)
-  return <>{CardList}</>
+
+  return <ProductCard allProduct={allProduct} style={{ display: 'flex' }} />
 }
+
 export default ProductList
