@@ -1,120 +1,89 @@
-// import { useAuth } from 'utils/useAuth'
-import axios from 'axios'
-import { useEffect } from 'react'
-import { useState } from 'react'
+// import { useState, useEffect } from 'react'
+// import axios from 'axios'
 
-const member_id = 2
+// function Collection() {
+//   const [collection, setCollection] = useState([])
+//   const [errorMessage, setErrorMessage] = useState([])
 
-function Home() {
-  // const { auth } = useAuth()
-  const [foods, setFoods] = useState([
-    { id: 1, name: '111', collected: false },
-    { id: 2, name: '222', collected: false },
-    { id: 3, name: '333', collected: false },
-    { id: 4, name: '444', collected: false },
-  ])
+//   async function getCollection() {
+//     try {
+//       const response = await axios.get('/collection?member_sid=2')
+//       console.log(response)
+//       const Cdata = response.data
+//       setCollection(Cdata)
+//     } catch (e) {
+//       console.error(e.message)
+//       setErrorMessage(e.message)
+//     }
+//   }
 
-  const [collection, setCollection] = useState([])
+//   const add = async (food_product_sid) => {
+//     const res = await axios.get(
+//       `api/collection/add?food_product_sid=${food_product_sid}&member_sid=${member_sid}`
+//     )
+//     console.log(res.data)
 
-  const getCollection = async () => {
-    const res = await axios.get(
-      'api/collection?member_id=' + member_id,
-      {
-        // withCredentials: true,
-      }
-    )
+//     {
+//       setCollection.map((v, i) => {
+//         if (v.sid === food_product_sid) return { ...v, collected: !v.collected }
 
-    console.log(res.data)
+//         return {
+//           ...v,
+//         }
+//       })
+//     }
+//   }
 
-    const foodIds = res.data.data
-    setCollection(foodIds)
+//   const remove = async (food_product_sid) => {
+//     const res = await axios.get(
+//       `api/collection/delete?food_product_sid=${food_product_sid}&member_sid=${member_sid}`
+//     )
+//     console.log(res.data)
 
-    const newFoods = foods.map((v, i) => {
-      return {
-        ...v,
-        collected: foodIds.includes(v.id),
-      }
-    })
+//     {
+//       setCollection.map((v, i) => {
+//         if (v.id === food_product_sid) return { ...v, collected: !v.collected }
 
-    console.log(newFoods)
+//         return {
+//           ...v,
+//         }
+//       })
+//     }
+//   }
+//   useEffect(() => {
+//     getCollection()
+//   }, [])
 
-    setFoods(newFoods)
-  }
+//   return (
+//     <>
+//       <ul>
+//         {collection.map((v, i) => {
+//           return (
+//             <li>
+//               {v.name}/
+//               {v.collected ? (
+//                 <button
+//                   onClick={() => {
+//                     remove(v.id)
+//                   }}
+//                 >
+//                   <img src="04-product/svg/collection.svg" alt="" />
+//                 </button>
+//               ) : (
+//                 <button
+//                   onClick={() => {
+//                     add(v.id)
+//                   }}
+//                 >
+//                   <img src="04-product/svg/like.svg" alt="" />
+//                 </button>
+//               )}
+//             </li>
+//           )
+//         })}
+//       </ul>
+//     </>
+//   )
+// }
 
-  const add = async (food_id) => {
-    const res = await axios.get(
-      `api/collection/add?food_id=${food_id}&member_id=${member_id}`
-    )
-
-    console.log(res.data)
-
-    const newFoods = foods.map((v, i) => {
-      if (v.id === food_id)
-        return { ...v, collected: !v.collected }
-
-      return {
-        ...v,
-      }
-    })
-
-    setFoods(newFoods)
-  }
-
-  const remove = async (food_id) => {
-    const res = await axios.get(
-      `api/collection/delete?food_id=${food_id}&member_id=${member_id}`
-    )
-
-    console.log(res.data)
-
-    const newFoods = foods.map((v, i) => {
-      if (v.id === food_id)
-        return { ...v, collected: !v.collected }
-
-      return {
-        ...v,
-      }
-    })
-
-    setFoods(newFoods)
-  }
-
-  useEffect(() => {
-    getCollection()
-  }, [])
-
-  return (
-    <>
-      <h1>Home</h1>
-      {/* <h2>{auth.isAuth ? '會員已登入' : '未登入'}</h2> */}
-      <ul>
-        {foods.map((v, i) => {
-          return (
-            <li>
-              {v.name}/
-              {v.collected ? (
-                <button
-                  onClick={() => {
-                    remove(v.id)
-                  }}
-                >
-                  O
-                </button>
-              ) : (
-                <button
-                  onClick={() => {
-                    add(v.id)
-                  }}
-                >
-                  X
-                </button>
-              )}
-            </li>
-          )
-        })}
-      </ul>
-    </>
-  )
-}
-
-export default Home
+// export default Collection

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Carouse.css'
+import './Carousel.css'
 
 export default function Carousel() {
   const [myArray, setMyArray] = useState(['0', '1', '2'])
@@ -27,7 +27,6 @@ export default function Carousel() {
           height: '200px',
           order: myArray[0],
           fontSize: '1.5rem',
-          background: 'red',
         }}
         onClick={(e) => {
           handleClick(e)
@@ -42,7 +41,6 @@ export default function Carousel() {
           height: '200px',
           order: myArray[1],
           fontSize: '1.5rem',
-          background: 'blue',
         }}
         onClick={(e) => handleClick(e)}
       >
@@ -55,7 +53,6 @@ export default function Carousel() {
           height: '200px',
           order: myArray[2],
           fontSize: '1.5rem',
-          background: 'green',
         }}
         onClick={(e) => handleClick(e)}
       >

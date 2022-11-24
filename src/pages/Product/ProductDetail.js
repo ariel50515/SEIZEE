@@ -10,7 +10,7 @@ function ProductDetail() {
   async function getDeatil() {
     try {
       const response = await axios.get(
-        'http://localhost:3002/product?shop_list_sid=2&sid=1'
+        'http://localhost:3002/product?sid=${sid}'
       )
       console.log(response.data)
       const Pdata = response.data
